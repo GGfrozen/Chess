@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private GameObject boardPrefab;
-    [SerializeField] private Transform boardSpawnPoint;
+    [SerializeField] private GameObject boardPrefab = default;
+    [SerializeField] private Transform boardSpawnPoint = default;
     [SerializeField] private float boardSpawnOffset = 0.5f;
 
-    [SerializeField] private FigureSide[] figureSide;
+    [SerializeField] private FigureSide[] figureSide = {};
 
     private List<GameObject> activeFigure = new List<GameObject>();
     private void Start()
@@ -27,11 +27,10 @@ public class GameManager : MonoBehaviour
 
     private void SpawnFigure(int index,int sideIndex)
     {
-        var figurePrefab = figureSide[sideIndex].FiguresPack[index].FigurePrefab;
-        var createPosition = figureSide[sideIndex].FiguresPack[index].SpawnPosition;
+        var figurePrefab = figureSide[sideIndex].GetPrefab(index);
+        var createPosition = figureSide[sideIndex].CreatePosition(index);
         var figure = Instantiate(figurePrefab, createPosition, Quaternion.identity);
         activeFigure.Add(figure);
-        SpawnPawn(sideIndex);
     }
 
     private void SpawnFigureToBoard()
@@ -40,13 +39,15 @@ public class GameManager : MonoBehaviour
         {
             SpawnFigure(i,0);
             SpawnFigure(i,1);
+            SpawnPawn(0);
+            SpawnPawn(1);
         }
     }
 
     private void SpawnPawn(int index)
     {
-        var blackPawn = figureSide[index].Pawn.FigurePrefab;
-        var whitePawn = figureSide[index].Pawn.FigurePrefab;
+        var blackPawn = figureSide[index].GetPawnPrefab();
+        var whitePawn = figureSide[index].GetPawnPrefab();
         for (var i = 0; i <= 7; i++)
         {
             var position = figureSide[index].SetPawnPosition(i);
