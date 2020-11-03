@@ -65,7 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604404983834</updated>
       <workItem from="1604404986689" duration="294000" />
-      <workItem from="1604405352967" duration="8385000" />
+      <workItem from="1604405352967" duration="10365000" />
     </task>
     <servers />
   </component>
@@ -78,10 +78,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="606" y="166" key="RiderGenerateDialog" timestamp="1604405379320">
+    <state x="606" y="166" key="RiderGenerateDialog" timestamp="1604418921032">
       <screen x="0" y="23" width="1440" height="826" />
     </state>
-    <state x="606" y="166" key="RiderGenerateDialog/0.23.1440.826@0.23.1440.826" timestamp="1604405379320" />
+    <state x="606" y="166" key="RiderGenerateDialog/0.23.1440.826@0.23.1440.826" timestamp="1604418921032" />
     <state x="399" y="188" width="670" height="676" key="search.everywhere.popup" timestamp="1604406233175">
       <screen x="0" y="23" width="1440" height="826" />
     </state>

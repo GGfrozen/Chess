@@ -40,23 +40,18 @@ public class GameManager : MonoBehaviour
         {
             SpawnFigure(i,0);
             SpawnFigure(i,1);
-            
         }
     }
 
     private void SpawnPawn(int index)
     {
-        var blackPawn = figureSide[index].Pawn;
-        var whitePawn = figureSide[index].Pawn;
-        for (var i = 0; i <= 8; i++)
+        var blackPawn = figureSide[index].Pawn.FigurePrefab;
+        var whitePawn = figureSide[index].Pawn.FigurePrefab;
+        for (var i = 0; i <= 7; i++)
         {
-            var newBlackPositionX = blackPawn.SpawnPosition.x + i;
-            var newBlackPosition = new Vector3(newBlackPositionX,blackPawn.SpawnPosition.y,blackPawn.SpawnPosition.z);
-            var newWhitePositionX = whitePawn.SpawnPosition.x + i;
-            var newWhitePosition = new Vector3(newWhitePositionX,whitePawn.SpawnPosition.y,whitePawn.SpawnPosition.z);
-            
-            var pawn = Instantiate(blackPawn, newBlackPosition, Quaternion.identity);
-            var pawn2 = Instantiate(whitePawn, newWhitePosition, Quaternion.identity);
+            var position = figureSide[index].SetPawnPosition(i);
+            var pawn = Instantiate(blackPawn, position, Quaternion.identity);
+            var pawn2 = Instantiate(whitePawn, position, Quaternion.identity);
         }
         
     }
