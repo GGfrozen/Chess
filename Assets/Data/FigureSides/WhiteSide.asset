@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac5c6f63010e4579af1d071988a5a0b, type: 3}
+  m_Name: WhiteSide
+  m_EditorClassIdentifier: 
+  sideName: White
+  figuresPack:
+  - {fileID: 11400000, guid: 1a1bfd6089c364fc59885b313bd1a257, type: 2}
+  - {fileID: 11400000, guid: ad72e1ee665254486b2cf8e6a45e0ede, type: 2}
+  - {fileID: 11400000, guid: 1d69d74affb9b4b27bbcf10a5e101a16, type: 2}
+  - {fileID: 11400000, guid: 2bc780fe3c23d4427bfdb19b07d56140, type: 2}
+  - {fileID: 11400000, guid: b2da3d12548764991928dfa2436f4d5e, type: 2}
+  - {fileID: 11400000, guid: 3d3bc748dc8384fa69e9eed0262908df, type: 2}
+  - {fileID: 11400000, guid: 8b96b3e4bbe1542a28b2107a728ec4da, type: 2}
+  - {fileID: 11400000, guid: 7e6deb0819c3b4cc5af16fde24aec425, type: 2}
+  pawn: {fileID: 11400000, guid: 79bff6a1e14c544708ebc781efbd2ca0, type: 2}
